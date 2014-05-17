@@ -222,6 +222,57 @@ Running RSpec should now get us back to Green:
 ````
 
 ### 3.3.3 Embedded Ruby
+*app/views/static_pages/about.html.erb*
+
+````
+<% provide(:title, 'About Us') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
+  </head>
+...
+````
+### 3.3.4 Eliminating duplication with layouts
+`$ mv foobar app/views/layouts/application.html.erb`
+
+````
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
+  <%= stylesheet_link_tag    "application", media: "all",
+                                            "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+````
+
+*app/views/static_pages/about.html.erb*
+
+````
+<% provide(:title, 'About Us') %>
+<h1>About Us</h1>
+<p>
+  The <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+  is a project to make a book and screencasts to teach web development
+  with <a href="http://rubyonrails.org/">Ruby on Rails</a>. This
+  is the sample application for the tutorial.
+</p>
+````
+## 3.4 Conclusion
+`$ git add --all`
+
+`$ git commit -m "Finish static pages"`
+
+
+
 
 
 
