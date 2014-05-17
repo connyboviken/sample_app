@@ -1,7 +1,10 @@
+<<<<<<< Local Changes
+<<<<<<< Local Changes
 # Ruby on Rails Tutorial: sample application
 
 This is the sample application for
 the [*Ruby on Rails Tutorial*](http://railstutorial.org/)
+<<<<<<< Local Changes
 by [Michael Hartl](http://michaelhartl.com/).
 
 
@@ -271,9 +274,20 @@ Running RSpec should now get us back to Green:
 
 `$ git commit -m "Finish static pages"`
 
+`$ git checkout master`
+
+`$ git merge static-pages`
+
+`$ git push`
 
 
 
 
 
 
+=======
+>>>>>>> External Changes
+=======
+by [Michael Hartl](http://michaelhartl.com/).>>>>>>> External Changes
+=======
+>>>>>>> External Changes
