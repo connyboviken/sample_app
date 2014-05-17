@@ -6,12 +6,16 @@ by [Michael Hartl](http://michaelhartl.com/).
 
 
 # 3 Mostly static pages
-$ cd ~/rails_projects
-$ rails new sample_app --skip-test-unit
-$ cd sample_app
+`$ cd ~/rails_projects`
+
+`$ rails new sample_app --skip-test-unit`
+
+``$ cd sample_app``
 
 Listing 3.1: A Gemfile for the sample app.
+````ruby
 source 'https://rubygems.org'
+
 ruby '2.0.0'
 
 gem 'rails', '4.0.5'
@@ -47,11 +51,17 @@ $ bundle update
 $ bundle install
 
 $ git init
+
 $ git add .
+
 $ git commit -m "Initial commit"
+
 $ git mv README.rdoc README.md
+
 $ git commit -am "Improve the README
+
 $ git remote add origin https://github.com/connyboviken/sample_app.git
+
 $ git push -u origin master
 
 # 3.1 Static pages
@@ -63,7 +73,7 @@ $ git push --set-upstream origin static-pages
 $ rails generate controller StaticPages home help
 
 # 3.2 Our first tests
-# 3.2.1 Test-driven development
+### 3.2.1 Test-driven development
 $ rails generate integration_test static_pages
 
 Listing 3.9: Code to test the contents of the Home page.
@@ -83,7 +93,7 @@ end
 
 $ bundle exec rspec spec/requests/static_pages_spec.rb
 
-# 3.2.2 Adding a page
+### 3.2.2 Adding a page
 
 Listing 3.14: Adding code to test the contents of the About page.
 spec/requests/static_pages_spec.rb
@@ -132,5 +142,5 @@ $ git add --all
 $ git commit -m "Add home, help and about"
 $ git push --set-upstream origin static-pages
 
-# 3.3 Slightly dynamic pages
-# 3.3.1 Testing a title change
+## 3.3 Slightly dynamic pages
+### 3.3.1 Testing a title change
