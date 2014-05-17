@@ -201,3 +201,28 @@ Running RSpec should now get us back to Green:
 ````
 `$ bundle exec rspec spec/requests/static_pages_spec.rb`
 
+### 3.3.2 Passing title tests
+*app/views/static_pages/about.html.erb*
+````
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby on Rails Tutorial Sample App | About Us</title>
+  </head>
+  <body>
+    <h1>About Us</h1>
+    <p>
+      The <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+      is a project to make a book and screencasts to teach web development
+      with <a href="http://rubyonrails.org/">Ruby on Rails</a>. This
+      is the sample application for the tutorial.
+    </p>
+  </body>
+</html>
+````
+
+### 3.3.3 Embedded Ruby
+
+
+
+
