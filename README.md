@@ -13,7 +13,9 @@ by [Michael Hartl](http://michaelhartl.com/).
 ``$ cd sample_app``
 
 Listing 3.1: A Gemfile for the sample app.
+
 ````ruby
+
 source 'https://rubygems.org'
 
 ruby '2.0.0'
@@ -45,6 +47,7 @@ group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
+
 ````
 
 ``$ bundle install --without production``
@@ -85,8 +88,11 @@ end
 ``$ rails generate integration_test static_pages``
 
 Listing 3.9: Code to test the contents of the Home page.
+
 *spec/requests/static_pages_spec.rb*
-````ruby
+
+```ruby
+
  require 'spec_helper'
 
 describe "Static pages" do
@@ -100,14 +106,17 @@ describe "Static pages" do
   end
 end
 ```
-`
+
 ``$ bundle exec rspec spec/requests/static_pages_spec.rb``
 
 ### 3.2.2 Adding a page
 
 Listing 3.14: Adding code to test the contents of the About page.
-````ruby
+
 *spec/requests/static_pages_spec.rb*
+
+```ruby
+
  require 'spec_helper'
 
 describe "Static pages" do
@@ -136,6 +145,7 @@ describe "Static pages" do
     end
   end
 end
+
 ````
 
 ``$ bundle exec rspec spec/requests/static_pages_spec.rb``
