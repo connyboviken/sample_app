@@ -31,8 +31,13 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-group :test, :development do
-  gem "rspec-rails", "~> 2.8"
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password
