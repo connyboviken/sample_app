@@ -7,7 +7,9 @@ by [Michael Hartl](http://michaelhartl.com/).
 
 # 3 Mostly static pages
 `$ cd ~/rails_projects`
+
 `$ rails new sample_app --skip-test-unit`
+
 ``$ cd sample_app``
 
 Listing 3.1: A Gemfile for the sample app.
@@ -46,25 +48,39 @@ end
 ````
 
 ``$ bundle install --without production``
+
 ``$ bundle update``
+
 ``$ bundle install``
+
 ``$ git init``
+
 ``$ git add .``
+
 ``$ git commit -m "Initial commit"``
+
 ``$ git mv README.rdoc README.md``
+
 ``$ git commit -am "Improve the README``
+
 ``$ git remote add origin https://github.com/connyboviken/sample_app.git``
+
 ``$ git push -u origin master``
 
 ## 3.1 Static pages
 ``$ git checkout -b static-pages``
+
 ``$ rails generate controller StaticPages home help --no-test-framework``
+
 ``$ git add .``
+
 ``$ git commit -m "Add a StaticPages controller"``
+
 ``$ git push --set-upstream origin static-pages``
+
 ``$ rails generate controller StaticPages home help``
 
-# 3.2 Our first tests
+## 3.2 Our first tests
 ### 3.2.1 Test-driven development
 ``$ rails generate integration_test static_pages``
 
