@@ -28,7 +28,7 @@ gem 'uglifier', '>= 1.3.0'
  Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
  See https://github.com/sstephenson/execjs#readme for more supported runtimes
- gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
  Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -182,3 +182,22 @@ Running RSpec should now get us back to Green:
 
 ## 3.3 Slightly dynamic pages
 ### 3.3.1 Testing a title change
+`$ mv app/views/layouts/application.html.erb foobar`
+
+*spec/requests/static_pages_spec.rb*
+````
+  describe "About page" do
+
+    it "should have the content 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('About Us')
+    end
+
+    it "should have the title 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
+    end
+  end
+````
+`$ bundle exec rspec spec/requests/static_pages_spec.rb`
+
