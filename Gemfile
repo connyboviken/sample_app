@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
@@ -31,6 +31,9 @@ gem 'spring',        group: :development
 #  gem 'rails_12factor'
 #end
 
+gem 'bootstrap-sass', '3.1.1'
+gem 'sprockets'
+
 group :development, :test do
   gem 'pg'
   gem 'rspec-rails'
@@ -41,7 +44,6 @@ group :test do
   gem 'capybara'
 end
 
-ruby '2.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
