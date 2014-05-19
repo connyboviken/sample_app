@@ -279,6 +279,8 @@ Running RSpec should now get us back to Green:
 `$ git merge static-pages`
 
 `$ git push`
+# 5 Filling in the layout
+
 
 
 
