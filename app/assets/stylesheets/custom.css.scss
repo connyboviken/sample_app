@@ -55,7 +55,7 @@ textarea {
 
 .hero-unit {
 	background-color: #eee;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 /* header */
@@ -89,26 +89,22 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
+	a {
+		color: #555;
+		&:hover {
+			color: #222;
+		}
+	}
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
 }
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}
